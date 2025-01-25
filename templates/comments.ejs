@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments</title>
+</head>
+<body>
+    <h1>Comments</h1>
+    <ul>
+        <% comments.forEach(comment => { %>
+            <li><b><%= comment.username %></b> : <%= comment.comment %></li>
+        <% }); %>
+    </ul>
+
+    <a href="/comments/new"><b>Add new Comment</b></a>
+</body>
+</html>

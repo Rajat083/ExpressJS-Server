@@ -63,6 +63,12 @@ app.patch('/comments/:id', (req, res) => {
     })
 });
 
+app.delete("/comments/:id", (req, res) => {
+    const { id } = req.params;
+    comments.comments = comments.comments.filter((comment) => comment.id != id);
+    res.redirect('/comments');
+});
+
 app.listen(port, () => {
     console.log(`http://localhost:${port}`);
 });

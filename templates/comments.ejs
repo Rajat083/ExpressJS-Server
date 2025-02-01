@@ -9,7 +9,7 @@
     <h1>Comments</h1>
     <ul>
         <% comments.forEach(comment => { %>
-            <li><b><%= comment.username %></b> : <%= comment.comment %></li>
+            <li><b><%= comment.username %></b> : <%= comment.comment %> <a href="/comments/<%= comment.id %>">Details</a> <a href="/comments/<%= comment.id %>/update">Update</a></li>
         <% }); %>
     </ul>
 
